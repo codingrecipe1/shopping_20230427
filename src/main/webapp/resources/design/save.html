@@ -28,47 +28,47 @@
 </div>
 <div id="section">
   <h2>홈쇼핑 회원 등록</h2>
-  <form action="/save" method="post">
+  <form action="/save" method="post" name="saveForm">
     <table>
       <tr>
         <th>회원성명</th>
         <td>
-          <input type="text" name="custname">
+          <input type="text" name="custname" id="cust-name">
         </td>
       </tr>
       <tr>
         <th>회원전화</th>
         <td>
-          <input type="text" name="phone" size="30">
+          <input type="text" name="phone" id="phone" size="30">
         </td>
       </tr>
       <tr>
         <th>회원주소</th>
         <td>
-          <input type="text" name="address" size="50">
+          <input type="text" name="address" id="address" size="50">
         </td>
       </tr>
       <tr>
         <th>가입일자</th>
         <td>
-          <input type="text" name="joindate">
+          <input type="text" name="joindate" id="join-date">
         </td>
       </tr>
       <tr>
         <th>고객등급(A:VIP,B:일반,C:직원)</th>
         <td>
-          <input type="text" name="grade">
+          <input type="text" name="grade" id="grade">
         </td>
       </tr>
       <tr>
         <th>도시코드</th>
         <td>
-          <input type="text" name="city">
+          <input type="text" name="city" id="city">
         </td>
       </tr>
       <tr>
         <td colspan="2" style="text-align: center">
-          <input style="display: inline" type="submit" value="등록">
+          <input style="display: inline" type="button" onclick="input_check()" value="등록">
           <input style="display: inline" type="button" value="조회">
         </td>
       </tr>
@@ -79,4 +79,15 @@
   <p>HRDKOREA Copyright&copy;2016 All rights reserved. Human Resources Development Service of Korea</p>
 </div>
 </body>
+<script>
+  const input_check = () => {
+      const custName = document.getElementById("cust-name");
+      if (custName.value == "") {
+        alert("이름을 입력해주세요");
+        custName.focus();
+      } else {
+        document.saveForm.submit();
+      }
+  }
+</script>
 </html>
