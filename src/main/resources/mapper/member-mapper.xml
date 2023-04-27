@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Member">
+    <insert id="save" parameterType="member">
+        insert into member_tbl_02(custname, phone, address, joindate, grade, city)
+            values(#{custname}, #{phone}, #{address}, #{joindate}, #{grade}, #{city})
+    </insert>
+
+    <select id="findAll" resultType="member">
+        select * from member_tbl_02
+    </select>
+
+    <select id="findById" parameterType="Long" resultType="member">
+        select * from member_tbl_02 where custno=#{custno}
+    </select>
+
+    <update id="update" parameterType="member">
+        update member_tbl_02 set phone=#{phone}, address=#{address}, grade=#{grade}, city=#{city}
+            where custno=#{custno}
+    </update>
+
+    <delete id="delete" parameterType="Long">
+        delete from member_tbl_02 where id=#{id}
+    </delete>
+</mapper>
+
+
+
+
+
+
+
+
+
