@@ -12,26 +12,8 @@
     <link rel="stylesheet" href="/resources/css/main.css">
 </head>
 <body>
-<div id="header">
-    <h1>쇼핑몰 회원관리</h1>
-</div>
-<div id="nav">
-    <ul>
-        <li>
-            <a href="/save">회원등록</a>
-        </li>
-        <li>
-            <a href="/list">회원목록조회/수정</a>
-        </li>
-        <li>
-            <a href="/">회원매출조회</a>
-        </li>
-        <li>
-            <a href="/">홈으로</a>
-        </li>
-
-    </ul>
-</div>
+<%@include file="./component/header.jsp"%>
+<%@include file="./component/nav.jsp"%>
 <div id="section">
     <h2>쇼핑몰 회원관리 프로그램</h2>
     <pre>
@@ -45,8 +27,7 @@
         6. 회원매출정보 조회 프로그램을 작성한다.
     </pre>
 </div>
-<div id="footer">
-    <p>HRDKOREA Copyright&copy;2016 All rights reserved. Human Resources Development Service of Korea</p>
-</div>
+<%@include file="./component/footer.jsp"%>
+
 </body>
 </html>
