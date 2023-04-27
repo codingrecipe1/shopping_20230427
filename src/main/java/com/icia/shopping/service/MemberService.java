@@ -5,6 +5,8 @@ import com.icia.shopping.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MemberService {
     @Autowired
@@ -12,5 +14,9 @@ public class MemberService {
 
     public void save(MemberDTO memberDTO) {
         memberRepository.save(memberDTO);
+    }
+
+    public List<MemberDTO> findAll() {
+        return memberRepository.findAll();
     }
 }
