@@ -24,8 +24,12 @@ public class MemberController {
 
     @PostMapping("/save")
     public String save(@ModelAttribute MemberDTO memberDTO) {
-        memberService.save(memberDTO);
-        return "redirect:/list";
+        boolean result = memberService.save(memberDTO);
+        if (result) {
+            return "redirect:/list";
+        } else {
+            return "errorPage";
+        }
     }
 
     @GetMapping("/list")
