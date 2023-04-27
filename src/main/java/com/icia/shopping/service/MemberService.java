@@ -23,4 +23,8 @@ public class MemberService {
     public MemberDTO findById(Long custno) {
         return memberRepository.findById(custno);
     }
+
+    public void update(MemberDTO memberDTO) {
+        memberRepository.update(memberDTO);
+    }
 }

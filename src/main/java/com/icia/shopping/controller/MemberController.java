@@ -41,4 +41,10 @@ public class MemberController {
         model.addAttribute("member", memberDTO);
         return "update";
     }
+
+    @PostMapping("/update")
+    public String update(@ModelAttribute MemberDTO memberDTO) {
+        memberService.update(memberDTO);
+        return "redirect:/detail?custno="+memberDTO.getCustno();
+    }
 }

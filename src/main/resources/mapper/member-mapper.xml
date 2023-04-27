@@ -22,7 +22,7 @@
     </update>
 
     <delete id="delete" parameterType="Long">
-        delete from member_tbl_02 where id=#{id}
+        delete from member_tbl_02 where custno=#{custno}
     </delete>
 </mapper>
 

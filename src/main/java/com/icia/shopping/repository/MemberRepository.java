@@ -23,4 +23,8 @@ public class MemberRepository {
     public MemberDTO findById(Long custno) {
         return sql.selectOne("Member.findById", custno);
     }
+
+    public void update(MemberDTO memberDTO) {
+        sql.update("Member.update", memberDTO);
+    }
 }
