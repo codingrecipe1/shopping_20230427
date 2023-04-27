@@ -19,4 +19,8 @@ public class MemberService {
     public List<MemberDTO> findAll() {
         return memberRepository.findAll();
     }
+
+    public MemberDTO findById(Long custno) {
+        return memberRepository.findById(custno);
+    }
 }

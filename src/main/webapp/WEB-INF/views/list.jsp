@@ -32,7 +32,7 @@
         <c:forEach items="${memberList}" var="member">
             <tr>
                 <td>
-                    <a style="text-decoration: none; color: white"
+                    <a style="text-decoration: none; color: black"
                        href="/detail?custno=${member.custno}">${member.custno}</a>
                 </td>
                 <td>${member.custname}</td>
