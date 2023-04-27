@@ -22,6 +22,10 @@
     text-align: center;
 }
 
+#section pre {
+    text-align: left;
+}
+
 #footer {
     background-color: #3157d2;
     text-align: center;
